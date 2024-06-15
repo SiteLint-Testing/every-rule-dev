@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Alt Attribute</title>
+
+<script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
+})(window, document, 'script');</script>
+
+</head>
+<body>
+    <h1>Missing Alt Attribute</h1>
+    
+    <p>This page demonstrates an accessibility issue with missing alt attributes on images.</p>
+    
+    <!-- Example of missing alt attribute -->
+    <img src="example-image.jpg">
+    
+    <p>This image above is missing an alt attribute, which is required for accessibility.</p>
+
+    <!-- Example of missing alt attribute in area element -->
+    <map name="example-map">
+        <area shape="rect" coords="34,44,270,350" href="example.html">
+    </map>
+    <img src="example-image-map.jpg" usemap="#example-map">
+    
+    <p>The image map area above is also missing an alt attribute.</p>
+
+    <!-- Example of missing alt attribute in input[type="image"] -->
+    <form action="submit.html">
+        <input type="image" src="submit-button.jpg">
+    </form>
+
+    <p>The image input button above is missing an alt attribute.</p>
+
+</body>
+</html>
