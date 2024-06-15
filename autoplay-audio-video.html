@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoplay Audio Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+
+<script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
+})(window, document, 'script');</script>
+
+</head>
+<body>
+    <h1>Autoplay Audio Video</h1>
+    
+    <!-- Example of an audio element with controls -->
+    <audio id="audioElement" controls>
+        <source src="your-audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div class="controls">
+        <!-- Custom controls for pausing/stopping audio -->
+        <button onclick="document.getElementById('audioElement').play()">Play</button>
+        <button onclick="document.getElementById('audioElement').pause()">Pause</button>
+        <button onclick="document.getElementById('audioElement').currentTime = 0">Stop</button>
+    </div>
+    
+    <script>
+        // Automatically play audio but with a control mechanism
+        window.onload = function() {
+            var audio = document.getElementById('audioElement');
+            audio.play();
+        };
+    </script>
+</body>
+</html>
