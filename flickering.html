@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flickering</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            transition: color 0.1s;
+        }
+    </style>
+
+<script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
+})(window, document, 'script');</script>
+
+</head>
+<body>
+    <h1>flickering</h1>
+
+    <script>
+        const h1 = document.querySelector('h1');
+        let isWhite = true;
+
+        setInterval(() => {
+            h1.style.color = isWhite ? 'black' : 'white';
+            isWhite = !isWhite;
+        }, 100); // Flashing every 100 milliseconds, which is 10 times per second
+    </script>
+</body>
+</html>
