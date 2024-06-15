@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria role dialog</title>
+
+<script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
+})(window, document, 'script');</script>
+
+</head>
+<body>
+    <h1>Aria role dialog</h1>
+    
+    <!-- Button to open the dialog -->
+    <button id="openDialogButton">Open Dialog</button>
+
+    <!-- Dialog -->
+    <div id="dialog" role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" style="display: none; border: 1px solid #000; padding: 10px; width: 300px;">
+        <h2 id="dialogTitle">Dialog Title</h2>
+        <p id="dialogDescription">This is a description of the dialog. It provides information about the content and purpose of the dialog.</p>
+        <button id="closeDialogButton">Close Dialog</button>
+    </div>
+
+    <script>
+        const openDialogButton = document.getElementById('openDialogButton');
+        const closeDialogButton = document.getElementById('closeDialogButton');
+        const dialog = document.getElementById('dialog');
+
+        openDialogButton.addEventListener('click', () => {
+            dialog.style.display = 'block';
+            dialog.setAttribute('aria-hidden', 'false');
+            closeDialogButton.focus();
+        });
+
+        closeDialogButton.addEventListener('click', () => {
+            dialog.style.display = 'none';
+            dialog.setAttribute('aria-hidden', 'true');
+            openDialogButton.focus();
+        });
+
+        // Ensure focus management within the dialog
+        dialog.addEventListener('keydown', (event) => {
+            if (event.key === 'Tab') {
+                const focusableElements = dialog.querySelectorAll('button');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (event.shiftKey) {
+                    // If Shift + Tab, focus the last element
+                    if (document.activeElement === firstElement) {
+                        event.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    // If Tab, focus the first element
+                    if (document.activeElement === lastElement) {
+                        event.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
