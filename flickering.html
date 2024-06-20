@@ -28,7 +28,7 @@
     })(window, document, 'script');</script>
 </head>
 <body>
-    <div class="dropdown-container">
+    <header class="dropdown-container">
         <label for="page-select">Select a page:</label>
         <select id="page-select" onchange="navigateToPage()">
             <option value="index.html">index</option>
@@ -78,9 +78,15 @@
             <option value="unclear-image-description.html">unclear image description</option>
             <option value="zoom-disabled.html">zoom disabled</option>
         </select>
-    </div>
+    </header>
 
-    <h1>flickering</h1>
+    <main>
+        <h1>flickering</h1>
+    </main>
+
+    <footer>
+        <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fflickering.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
+    </footer>
 
     <script>
         function navigateToPage() {
@@ -97,7 +103,5 @@
             isWhite = !isWhite;
         }, 100); // Flashing every 100 milliseconds, which is 10 times per second
     </script>
-
-    <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fflickering.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
 </body>
 </html>
