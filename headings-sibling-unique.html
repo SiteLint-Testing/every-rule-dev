@@ -12,7 +12,7 @@
 <body>
 
     <label for="page-select">Select a page:</label>
-<select id="page-select" onchange="navigateToPage()">
+    <select id="page-select" onchange="navigateToPage()">
     <option value="index.html">index</option>
     <option value="alt-text-filename.html">alt text filename</option>
     <option value="aria-hidden-false.html">aria hidden false</option>
@@ -73,20 +73,19 @@
     <h1>Headings Sibling Unique</h1>
 
     <!-- Incorrect example: Sibling headings with the same accessible name -->
-    <h2>Example</h2>
+    <h2>Heading text</h2>
+    <h3>Heading text</h3>
     <p>This is the content for the first section.</p>
 
     <h2>Example</h2>
     <p>This is the content for the second section.</p>
 
     <!-- Correct example: Sibling headings with unique accessible names -->
-    <h2>Example 1</h2>
+    <h2>Heading text, correct</h2>
+    <h3>SubHeading text, correct</h3>
     <p>This is the content for the third section.</p>
 
-    <h2>Example 2</h2>
-    <p>This is the content for the fourth section.</p>
-
-<a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fheadings-sibling-unique.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
+    <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fheadings-sibling-unique.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
 
 </body>
 </html>
