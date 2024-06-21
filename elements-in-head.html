@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elements Not Allowed in the Head</title>
-    <script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
-    })(window, document, 'script');</script>
+    <script>(function (w, d, s, a, m, t) {
+            a = d.createElement(s); m = d.getElementsByTagName(s)[0]; a.defer = true; a.id = 'auditor_app'; a.dataset.autorun = ''; a.dataset.cfasync = 'false'; a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950'; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script');</script>
     <div>This is an invalid element inside the head section</div>
 </head>
+
 <body>
     <label for="page-select">Select a page:</label>
     <select id="page-select" onchange="navigateToPage()">
@@ -59,6 +62,8 @@
         <option value="zoom-disabled.html">zoom disabled</option>
     </select>
 
-    <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Felements-in-head.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
+    <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Felements-in-head.html#tab_failed_reports"
+        target="_blank">View SiteLint Report</a>
 </body>
+
 </html>
