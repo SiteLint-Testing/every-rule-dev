@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>outline-zero</title>
+<script>(function(w,d,s,a,m,t){a=d.createElement(s);m=d.getElementsByTagName(s)[0];a.defer=true;a.id='auditor_app';a.dataset.autorun='';a.dataset.cfasync='false';a.src='https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a,m);
+})(window,document,'script');</script>
+<style>
+  /* Remove outline for all focusable elements */
+  button, input[type="text"], a {
+    outline: none;
+  }
+  /* Styling for demonstration purposes */
+  button, input[type="text"], a {
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+  }
+  button:hover, input[type="text"]:hover, a:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+</head>
+<body>
+    <h1>Outline Zero Example</h1>
+    <p>Click on the elements below to see their focus behavior:</p>
+    <button>Button</button>
+    <input type="text" placeholder="Input Field">
+    <a href="#">Link</a>
+</body>
+</html>
