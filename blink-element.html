@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>blink-element</title>
+<script>
+    // JavaScript for external script inclusion
+    (function(w,d,s,a,m,t){
+        a = d.createElement(s);
+        m = d.getElementsByTagName(s)[0];
+        a.defer = true;
+        a.id = 'auditor_app';
+        a.dataset.autorun = '';
+        a.dataset.cfasync = 'false';
+        a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';
+        m.parentNode.insertBefore(a, m);
+    })(window, document, 'script');
+</script>
+<style>
+    /* CSS to style the blink element */
+    .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+</style>
+</head>
+<body>
+<h1>blink-element</h1>
+
+<!-- Example of using deprecated blink element -->
+<p>This text will <blink>blink</blink> continuously.</p>
+
+</body>
+</html>
