@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>duplicated-for-attribute</title>
+<script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
+})(window, document, 'script');</script>
+</head>
+<body>
+    <h1>duplicated-for-attribute</h1>
+    
+    <!-- Example of duplicated 'for' attribute -->
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+    
+    <!-- Incorrect usage with duplicated 'for' attribute -->
+    <label for="username">Password:</label>
+    <input type="password" id="password">
+    
+    <!-- Correct usage should be unique for each input -->
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+    
+    <!-- Another example of incorrect usage -->
+    <label for="email">Confirm Email:</label>
+    <input type="email" id="email-confirm">
+    
+    <!-- Another correct usage with unique 'for' attributes -->
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone">
+</body>
+</html>
