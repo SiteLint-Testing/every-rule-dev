@@ -8,6 +8,130 @@
 })(window, document, 'script');</script>
 </head>
 <body>
+
+    <label for="page-select">Select a page:</label>
+<select id="page-select" onchange="navigateToPage()">
+    <option value="index.html">index</option>
+    <option value="alt-text-filename.html">alt text filename</option>
+    <option value="animation.html">animation</option>
+    <option value="applet-missing-alt.html">applet missing alt</option>
+    <option value="applet-missing-body.html">applet missing body</option>
+    <option value="area-missing-alt.html">area missing alt</option>
+    <option value="aria-attribute-conflict.html">aria attribute conflict</option>
+    <option value="aria-describedby-association.html">aria-describedby association</option>
+    <option value="aria-hidden-false.html">aria hidden false</option>
+    <option value="aria-hidden-true-focusable-descendants.html">aria hidden true focusable descendants</option>
+    <option value="aria-labelledby-association.html">aria-labelledby association</option>
+    <option value="aria-role-dialog.html">aria role dialog</option>
+    <option value="audio-alternative.html">audio alternative</option>
+    <option value="audio-video-captions.html">audio video captions</option>
+    <option value="autoplay-audio-video.html">autoplay audio video</option>
+    <option value="blink-element.html">blink element</option>
+    <option value="broken-same-page-link.html">broken same page link</option>
+    <option value="capital-letters.html">capital letters</option>
+    <option value="captcha-google.html">captcha google</option>
+    <option value="click-verb.html">click verb</option>
+    <option value="color-contrast-aa.html">color contrast aa</option>
+    <option value="color-contrast-aaa.html">color contrast aaa</option>
+    <option value="color-name.html">color name</option>
+    <option value="content-editable-missing-attributes.html">content editable missing attributes</option>
+    <option value="contentinfo-landmark-only-one.html">contentinfo landmark only one</option>
+    <option value="css-images-convey-information.html">css images convey information</option>
+    <option value="duplicated-for-attribute.html">duplicated for attribute</option>
+    <option value="duplicated-id.html">duplicated id</option>
+    <option value="ebi-test.html">ebi test</option>
+    <option value="elements-in-head.html">elements in head</option>
+    <option value="empty-button-description.html">empty button description</option>
+    <option value="empty-heading.html">empty heading</option>
+    <option value="empty-label-element.html">empty label element</option>
+    <option value="empty-link-element.html">empty link element</option>
+    <option value="empty-title-attribute.html">empty title attribute</option>
+    <option value="fieldset-no-legend.html">fieldset no legend</option>
+    <option value="flash-content.html">flash content</option>
+    <option value="flickering.html">flickering</option>
+    <option value="font-style-italic.html">font style italic</option>
+    <option value="general-alt.html">general alt</option>
+    <option value="group-elements-name-attribute.html">group elements name attribute</option>
+    <option value="h1-must-be-defined.html">h1 must be defined</option>
+    <option value="h1-only-one.html">h1 only one</option>
+    <option value="headings-hierarchy.html">headings hierarchy</option>
+    <option value="headings-sibling-unique.html">headings sibling unique</option>
+    <option value="horizontal-rule.html">horizontal rule</option>
+    <option value="html-lang-attr.html">html lang attr</option>
+    <option value="identify-input-purpose.html">identify input purpose</option>
+    <option value="img-adjacent-duplicate-text-link.html">img adjacent duplicate text link</option>
+    <option value="img-alt-duplicate-text-link.html">img alt duplicate text link</option>
+    <option value="img-empty-alt-in-link.html">img empty alt in link</option>
+    <option value="img-empty-alt-with-empty-title.html">img empty alt with empty title</option>
+    <option value="inaccessible-svg.html">inaccessible svg</option>
+    <option value="incorrect-label-placement-for-associated-input.html">incorrect label placement for associated input</option>
+    <option value="incorrect-technique-for-hiding-content.html">incorrect technique for hiding content</option>
+    <option value="input-image-missing-alt.html">input image missing alt</option>
+    <option value="invalid-attribute-dir-value.html">invalid attribute dir value</option>
+    <option value="label-duplicated-content-title.html">label duplicated content title</option>
+    <option value="label-implicitly-associated.html">label implicitly associated</option>
+    <option value="label-inappropriate-association.html">label inappropriate association</option>
+    <option value="label-visually-hidden-only.html">label visually hidden only</option>
+    <option value="legend-first-child-of-fieldset.html">legend first child of fieldset</option>
+    <option value="link-with-unclear-purpose.html">link with unclear purpose</option>
+    <option value="links-language-destination.html">links language destination</option>
+    <option value="links-new-window-mark.html">links new window mark</option>
+    <option value="links-not-visually-evident-without-color-vision.html">links not visually evident without color vision</option>
+    <option value="links-same-content-different-url.html">links same content different url</option>
+    <option value="main-element-only-one.html">main element only one</option>
+    <option value="main-landmark-must-be-top-level.html">main landmark must be top level</option>
+    <option value="manifest-extension.html">manifest extension</option>
+    <option value="meaningful-content-sequence.html">meaningful content sequence</option>
+    <option value="minimum-font-size.html">minimum font size</option>
+    <option value="missing-alt-attribute.html">missing alt attribute</option>
+    <option value="missing-href.html">missing href</option>
+    <option value="missing-label.html">missing label</option>
+    <option value="missing-submit-button.html">missing submit button</option>
+    <option value="misused-aria.html">misused aria</option>
+    <option value="misused-input-attribute.html">misused input attribute</option>
+    <option value="misused-required-attribute.html">misused required attribute</option>
+    <option value="misused-tabindex-attribute.html">misused tabindex attribute</option>
+    <option value="motion-actuation.html">motion actuation</option>
+    <option value="navigation-landmark-restrictions.html">navigation landmark restrictions</option>
+    <option value="no-headings.html">no headings</option>
+    <option value="no-meta-http-equiv-refresh.html">no meta http-equiv refresh</option>
+    <option value="object-general-alt.html">object general alt</option>
+    <option value="object-missing-body.html">object missing body</option>
+    <option value="obsolete-angular-detected.html">obsolete angular detected</option>
+    <option value="obsolete-html-attributes.html">obsolete html attributes</option>
+    <option value="obsolete-html-elements.html">obsolete html elements</option>
+    <option value="orientation.html">orientation</option>
+    <option value="outline-zero.html">outline zero</option>
+    <option value="overlay.html">overlay</option>
+    <option value="position-sticky.html">position sticky</option>
+    <option value="positive-tabindex.html">positive tabindex</option>
+    <option value="reflow.html">reflow</option>
+    <option value="svg-incorrect-size-unit.html">svg incorrect size unit</option>
+    <option value="svg-without-accessible-description.html">svg without accessible description</option>
+    <option value="table-caption-summary-identical.html">table caption summary identical</option>
+    <option value="table-missing-description.html">table missing description</option>
+    <option value="table-row-and-column-headers.html">table row and column headers</option>
+    <option value="target-size-minimum.html">target size minimum</option>
+    <option value="text-color-convey-information.html">text color convey information</option>
+    <option value="title-for-abbr.html">title for abbr</option>
+    <option value="title-iframe.html">title iframe</option>
+    <option value="unclear-anchor-url.html">unclear anchor url</option>
+    <option value="unclear-image-description.html">unclear image description</option>
+    <option value="unclear-page-title.html">unclear page title</option>
+    <option value="unsupported-role-on-element.html">unsupported role on element</option>
+    <option value="video-audio-descriptions.html">video audio descriptions</option>
+    <option value="zoom-disabled.html">zoom disabled</option>
+</select>
+
+<script>
+    function navigateToPage() {
+        var select = document.getElementById("page-select");
+        var selectedValue = select.options[select.selectedIndex].value;
+        window.location.href = selectedValue;
+    }
+</script>
+
+    
     <h1>Main Heading</h1>
     <h3>Subheading 1</h3>
     <h2>Subheading 2</h2>
