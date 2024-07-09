@@ -24,8 +24,18 @@
         }
     </style>
 
-    <script>(function(w,d,s,a,m,t){a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.id = 'auditor_app';a.dataset.autorun = '';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a, m);
-    })(window, document, 'script');</script>
+    <script>
+        (function(w,d,s,a,m,t){
+            a = d.createElement(s);
+            m = d.getElementsByTagName(s)[0];
+            a.defer = true;
+            a.id = 'auditor_app';
+            a.dataset.autorun = '';
+            a.dataset.cfasync = 'false';
+            a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script');
+    </script>
 </head>
 <body>
     <header class="dropdown-container">
@@ -81,8 +91,6 @@
             <option value="unclear-image-description.html">unclear image description</option>
             <option value="zoom-disabled.html">zoom disabled</option>
         </select>
-
-
     </header>
 
     <main>
@@ -95,9 +103,16 @@
 
     <script>
         function navigateToPage() {
-            var select = document.getElementById("page-select");
-            var selectedValue = select.options[select.selectedIndex].value;
-            window.location.href = selectedValue;
+            const select = document.getElementById('page-select');
+            const checkbox = document.getElementById('append-checkbox');
+            let selectedPage = select.value;
+            const parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+
+            if (checkbox.checked) {
+                selectedPage += parameter;
+            }
+
+            window.location.href = selectedPage;
         }
 
         const h1 = document.querySelector('h1');

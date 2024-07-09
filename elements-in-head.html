@@ -65,10 +65,21 @@
         <option value="zoom-disabled.html">zoom disabled</option>
     </select>
 
+    <script>
+        function navigateToPage() {
+            const select = document.getElementById('page-select');
+            const checkbox = document.getElementById('append-checkbox');
+            let selectedPage = select.value;
+            const parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
 
+            if (checkbox.checked) {
+                selectedPage += parameter;
+            }
 
-    <div><a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Felements-in-head.html#tab_failed_reports"
-        target="_blank">View SiteLint Report</a></div>
+            window.location.href = selectedPage;
+        }
+    </script>
 </body>
+
 
 </html>

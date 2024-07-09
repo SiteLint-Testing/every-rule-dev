@@ -61,8 +61,6 @@
         <option value="zoom-disabled.html">zoom disabled</option>
     </select>
 
-
-
     <!-- Button to open the dialog -->
     <button id="openDialogButton">Open Dialog</button>
 
@@ -94,8 +92,15 @@
 
         function navigateToPage() {
             const select = document.getElementById('page-select');
-            const page = select.value;
-            window.location.href = page;
+            const checkbox = document.getElementById('append-checkbox');
+            let selectedPage = select.value;
+            const parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+
+            if (checkbox.checked) {
+                selectedPage += parameter;
+            }
+
+            window.location.href = selectedPage;
         }
 
         // Ensure focus management within the dialog

@@ -79,10 +79,17 @@
     <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fcss-images-convey-information.html#tab_failed_reports"_blank">View SiteLint Report</a>
     <script>
         function navigateToPage() {
-            var select = document.getElementById('page-select');
-            var page = select.value;
-            window.location.href = page;
+            var select = document.getElementById("page-select");
+            var checkbox = document.getElementById("append-checkbox");
+            var selectedPage = select.value;
+            var parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+    
+            if (checkbox.checked) {
+                selectedPage += parameter;
+            }
+    
+            window.location.href = selectedPage;
         }
     </script>
-</body>
+    </body>
 </html>

@@ -73,10 +73,17 @@
 
     <script>
         function navigateToPage() {
-            var select = document.getElementById("page-select");
-            var page = select.value;
-            window.location.href = page;
+            const select = document.getElementById('page-select');
+            const checkbox = document.getElementById('append-checkbox');
+            let selectedPage = select.value;
+            const parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+    
+            if (checkbox.checked) {
+                selectedPage += parameter;
+            }
+    
+            window.location.href = selectedPage;
         }
     </script>
-</body>
+    </body>
 </html>
