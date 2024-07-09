@@ -123,13 +123,26 @@
     <option value="zoom-disabled.html">zoom disabled</option>
 </select>
 
+<label for="append-checkbox">Append URL</label>
+<input type="checkbox" id="append-checkbox">
+
+
+
 <script>
     function navigateToPage() {
         var select = document.getElementById("page-select");
+        var checkbox = document.getElementById("append-checkbox");
         var selectedValue = select.options[select.selectedIndex].value;
+        var parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+
+        if (checkbox.checked) {
+            selectedValue += parameter;
+        }
+
         window.location.href = selectedValue;
     }
 </script>
+
 
     
     <h1>Legend First Child of Fieldset Example</h1>
