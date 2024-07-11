@@ -148,26 +148,38 @@
     <p>Shake your device to see the alert.</p>
 
     <script>
-        if (typeof DeviceMotionEvent.requestPermission === 'function') {
-            // iOS 13+ devices require permission to access motion sensors
-            DeviceMotionEvent.requestPermission().then(permissionState => {
-                if (permissionState === 'granted') {
-                    window.addEventListener('devicemotion', handleMotion);
-                }
-            }).catch(console.error);
-        } else {
-            // Non-iOS 13+ devices
-            window.addEventListener('devicemotion', handleMotion);
-        }
-
+        // Function to handle device motion events
         function handleMotion(event) {
             const threshold = 10;
+            console.log("Motion detected: ", event.accelerationIncludingGravity);
             if (Math.abs(event.accelerationIncludingGravity.x) > threshold ||
                 Math.abs(event.accelerationIncludingGravity.y) > threshold ||
                 Math.abs(event.accelerationIncludingGravity.z) > threshold) {
                 alert('Device shaken!');
             }
         }
+
+        // Function to request permission for motion sensors
+        function requestMotionPermission() {
+            if (typeof DeviceMotionEvent.requestPermission === 'function') {
+                // iOS 13+ devices
+                DeviceMotionEvent.requestPermission().then(permissionState => {
+                    if (permissionState === 'granted') {
+                        console.log("Motion permission granted");
+                        window.addEventListener('devicemotion', handleMotion);
+                    } else {
+                        console.log("Motion permission denied");
+                    }
+                }).catch(console.error);
+            } else {
+                // Non-iOS 13+ devices
+                console.log("Motion permission not required");
+                window.addEventListener('devicemotion', handleMotion);
+            }
+        }
+
+        // Request motion permission on load
+        window.onload = requestMotionPermission;
     </script>
 
     <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Fmotion-actuation.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
