@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>orientation</title>
-<script>(function(w,d,s,a,m,t){a=d.createElement(s);m=d.getElementsByTagName(s)[0];a.defer=true;a.id='auditor_app';a.dataset.autorun='';a.dataset.cfasync='false';a.src='https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950';m.parentNode.insertBefore(a,m);
-})(window,document,'script');</script>
-<style>
-  .container {
-    width: 800px;
-    margin: 0 auto;
-  }
-  .item {
-    float: left;
-    width: 200px;
-    height: 200px;
-    background-color: lightblue;
-    margin: 10px;
-    text-align: center;
-    line-height: 200px;
-    font-size: 24px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>orientation</title>
+  <script>(function (w, d, s, a, m, t) {
+      a = d.createElement(s); m = d.getElementsByTagName(s)[0]; a.defer = true; a.id = 'auditor_app'; a.dataset.autorun = ''; a.dataset.cfasync = 'false'; a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950'; m.parentNode.insertBefore(a, m);
+    })(window, document, 'script');</script>
+  <style>
+    /* Default styles for portrait orientation */
+    body {
+      background-color: lightblue;
+    }
+
+    /* Styles for landscape orientation */
+    @media screen and (orientation: landscape) {
+      body {
+        background-color: lightgreen;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <label for="append-checkbox">Show sidebar</label>
-<input type="checkbox" id="append-checkbox">
+  <label for="append-checkbox">Show sidebar</label>
+  <input type="checkbox" id="append-checkbox">
 
-<label for="page-select">Select a page:</label>
-<select id="page-select" onchange="navigateToPage()">
+  <label for="page-select">Select a page:</label>
+  <select id="page-select" onchange="navigateToPage()">
     <option value="index.html">index</option>
     <option value="alt-text-filename.html">alt text filename</option>
     <option value="animation.html">animation</option>
@@ -82,7 +82,8 @@
     <option value="img-empty-alt-in-link.html">img empty alt in link</option>
     <option value="img-empty-alt-with-empty-title.html">img empty alt with empty title</option>
     <option value="inaccessible-svg.html">inaccessible svg</option>
-    <option value="incorrect-label-placement-for-associated-input.html">incorrect label placement for associated input</option>
+    <option value="incorrect-label-placement-for-associated-input.html">incorrect label placement for associated input
+    </option>
     <option value="incorrect-technique-for-hiding-content.html">incorrect technique for hiding content</option>
     <option value="input-image-missing-alt.html">input image missing alt</option>
     <option value="invalid-attribute-dir-value.html">invalid attribute dir value</option>
@@ -94,7 +95,8 @@
     <option value="link-with-unclear-purpose.html">link with unclear purpose</option>
     <option value="links-language-destination.html">links language destination</option>
     <option value="links-new-window-mark.html">links new window mark</option>
-    <option value="links-not-visually-evident-without-color-vision.html">links not visually evident without color vision</option>
+    <option value="links-not-visually-evident-without-color-vision.html">links not visually evident without color vision
+    </option>
     <option value="links-same-content-different-url.html">links same content different url</option>
     <option value="main-element-only-one.html">main element only one</option>
     <option value="main-landmark-must-be-top-level.html">main landmark must be top level</option>
@@ -139,35 +141,37 @@
     <option value="unsupported-role-on-element.html">unsupported role on element</option>
     <option value="video-audio-descriptions.html">video audio descriptions</option>
     <option value="zoom-disabled.html">zoom disabled</option>
-</select>
+  </select>
 
 
 
-<script>
+  <script>
     function navigateToPage() {
-        var select = document.getElementById("page-select");
-        var checkbox = document.getElementById("append-checkbox");
-        var selectedValue = select.options[select.selectedIndex].value;
-        var parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
+      var select = document.getElementById("page-select");
+      var checkbox = document.getElementById("append-checkbox");
+      var selectedValue = select.options[select.selectedIndex].value;
+      var parameter = '?sitelint=%5B%7B%22ui%22%3A%22full%22%7D%5D';
 
-        if (checkbox.checked) {
-            selectedValue += parameter;
-        }
+      if (checkbox.checked) {
+        selectedValue += parameter;
+      }
 
-        window.location.href = selectedValue;
+      window.location.href = selectedValue;
     }
-</script>
+  </script>
 
 
-    
-    <h1>Orientation Example</h1>
-    <div class="container">
-        <div class="item">Box 1</div>
-        <div class="item">Box 2</div>
-        <div class="item">Box 3</div>
-    </div>
 
-    <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Forientation.html#tab_failed_reports" target="_blank">View SiteLint Report</a>
+  <h1>Orientation Example</h1>
+  <div class="container">
+    <div class="item">Box 1</div>
+    <div class="item">Box 2</div>
+    <div class="item">Box 3</div>
+  </div>
 
-  </body>
+  <a href="https://platform-staging.sitelint.site/audits/sites/site/reports?token=f1c099211379e038cff26cbdeaaf9918eb39aea3978c0648935080e02f36f950&url=https:%2F%2Fsitelint-testing.github.io%2Fevery-rule%2Forientation.html#tab_failed_reports"
+    target="_blank">View SiteLint Report</a>
+
+</body>
+
 </html>
