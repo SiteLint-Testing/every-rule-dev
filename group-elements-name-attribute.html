@@ -141,23 +141,17 @@
         window.location.href = selectedValue;
     }
 </script>
-
-
-    
     <h1>group-elements-name-attribute</h1>
     
-    <form action="#">
-        <fieldset>
-            <legend>Personal Information</legend>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="name">
-            <br>
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="name">
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </fieldset>
+    <form action="">
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname" name="name">
+        <br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" id="lastname" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
     </form>
     
     <p>In this form, the "First Name" and "Last Name" fields share the same name attribute "name". This is incorrect as each input should have a unique name attribute to properly distinguish them when the form is submitted. Screen readers and other assistive technologies rely on the name attribute to understand the purpose and content of form elements.</p>
