@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta description truncation</title>
+    <meta name="description" content="This is an example of a meta description that is way too long and is likely to be truncated by search engines and other platforms because it exceeds the recommended length for meta descriptions. The recommended length for a meta description is typically between 150-160 characters, and this example far exceeds that limit, which can lead to important information being cut off and not displayed to the user. Ensuring that meta descriptions are concise and within the recommended length can improve the user experience and the effectiveness of the description in search engine results.">
+    <script>
+    (function(w,d,s,a,m,t) {
+      a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.fetchpriority='high';a.id = 'auditor_app';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=e0e568cd35f15dcb5a7b98805e8ef5c447ef519ebcdbbea8a508da215390616e';
+
+      function onPageLoaded() {
+        w.clearTimeout(t);
+        w.removeEventListener('DOMContentLoaded', onPageLoaded);
+
+        function loadSiteLintAuditor() {
+          m.parentNode.insertBefore(a, m);
+        }
+        w.setTimeout(loadSiteLintAuditor, 3500);
+      }
+      function onAuditorLoaded(){
+        auditor.config({
+          includeHidden: true,
+          stripTextFromReport: false,
+          watchDomChanges: true
+        }).run();
+      }
+
+      a.addEventListener('load', onAuditorLoaded);
+
+      if (d.readyState !== 'loading') {
+        onPageLoaded();
+        return;
+      }
+
+      w.addEventListener('DOMContentLoaded', onPageLoaded);
+    })(window, document, 'script');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Meta description truncation</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to our example page that breaks accessibility requirements by having a meta description that is too long.</p>
+        </section>
+        <section>
+            <h2>More Information</h2>
+            <p>This page demonstrates how a meta description can be truncated by search engines and other platforms if it exceeds the recommended length.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Example Company</p>
+    </footer>
+</body>
+</html>
