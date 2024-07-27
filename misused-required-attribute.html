@@ -150,10 +150,10 @@
     <h1>Misused Required Attribute</h1>
     <form>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required aria-required="true">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        <button type="submit" required aria-required="true">Submit</button>
+        <button type="submit">Submit</button>
     </form>
     <p>This form includes required attributes on input fields but lacks appropriate validation and error handling.</p>
 
