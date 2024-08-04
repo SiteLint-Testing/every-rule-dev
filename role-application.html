@@ -42,7 +42,7 @@
       <label for="append-checkbox">Show sidebar</label>
       <input type="checkbox" id="append-checkbox">
       
-      <label for="page-select">Select a page:</label>
+      <label for="page-select">Navigate to a SiteLint violation example:</label>
       <select id="page-select" onchange="navigateToPage()">
       <option value="index.html">index</option>
       <option value="accessible-name-mismatch-element-description.html">1. accessible name mismatch element description</option>
@@ -184,7 +184,11 @@
                   selectedValue += parameter;
               }
       
-              window.location.href = selectedValue;
+              if (selectedValue !== "index.html") {
+    window.open(selectedValue, '_blank');
+} else {
+    window.location.href = selectedValue;
+}
           }
       </script>
       
