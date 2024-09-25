@@ -6,36 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content wider than screen</title>
     <script>
-        (function (w, d, s, a, m, t) {
-            a = d.createElement(s); m = d.getElementsByTagName(s)[0]; a.defer = true; a.fetchpriority = 'high'; a.id = 'auditor_app'; a.dataset.cfasync = 'false'; a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=cd63d1cc5383f27b7a7ee35c47d1f68e14f15aa6426f00e526a41a6eff587f78';
+(function(w,d,s,a,m,t) {
+  a = d.createElement(s);m = d.getElementsByTagName(s)[0];a.defer = true;a.fetchpriority='high';a.id = 'auditor_app';a.dataset.cfasync = 'false';a.src = 'https://stage-auditor.sitelint.com/auditor.bundle.js?tokenId=cd63d1cc5383f27b7a7ee35c47d1f68e14f15aa6426f00e526a41a6eff587f78';
 
-            function onPageLoaded() {
-                w.clearTimeout(t);
-                w.removeEventListener('DOMContentLoaded', onPageLoaded);
+  function onPageLoaded() {
+    w.clearTimeout(t);
+    w.removeEventListener('DOMContentLoaded', onPageLoaded);
+    m.parentNode.insertBefore(a, m);
+  }
+  
+  function onAuditorLoaded(){
+    auditor.config({
+      includeHidden: false,
+      stripTextFromReport: false,
+      watchDomChanges: true
+    }).run();
+  }
 
-                function loadSiteLintAuditor() {
-                    m.parentNode.insertBefore(a, m);
-                }
-                w.setTimeout(loadSiteLintAuditor, 3500);
-            }
-            function onAuditorLoaded() {
-                auditor.config({
-                    includeHidden: true,
-                    stripTextFromReport: false,
-                    watchDomChanges: true
-                }).run();
-            }
+  a.addEventListener('load', onAuditorLoaded);
 
-            a.addEventListener('load', onAuditorLoaded);
+  if (d.readyState !== 'loading') {
+    onPageLoaded();
+    return;
+  }
 
-            if (d.readyState !== 'loading') {
-                onPageLoaded();
-                return;
-            }
-
-            w.addEventListener('DOMContentLoaded', onPageLoaded);
-        })(window, document, 'script');
-    </script>
+  w.addEventListener('DOMContentLoaded', onPageLoaded);
+})(window, document, 'script');
+</script>
     <style>
         .wide-content {
             width: 2000px;
